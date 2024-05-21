@@ -1,4 +1,3 @@
-
 import heapq
 def min_cost_to_connect_cables(cables):
     heapq.heapify(cables)
@@ -9,7 +8,7 @@ def min_cost_to_connect_cables(cables):
         cable2 = heapq.heappop(cables)
         merged_cable = cable1 + cable2
         total_cost += merged_cable
-    heapq.heappush(cables, merged_cable)
+        heapq.heappush(cables, merged_cable)
     return total_cost
-cables = [8, 4, 6, 12, 2, 9]
+cables = [4, 2, 3, 1]
 print("Minimum total cost:", min_cost_to_connect_cables(cables))
